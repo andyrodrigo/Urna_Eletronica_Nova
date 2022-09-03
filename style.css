@@ -4,31 +4,33 @@ body{
     align-items: center;
     width: 100vw;
     height: 100vh;
-    background-color: black;
+    background-color: white;
 }
 
 #urna{
-    width: 50%;
+    width: 45%;
     height: 90%;
     background-color: aquamarine;
 }
 
 #hardware{
     display: flex;
+    align-items: flex-end;
     width: 100%;
     height: 100%;
-    background-color:antiquewhite;  
+    border-radius: 15px;
+    overflow: hidden
 }
 
 .aba{
     height: 100%;
     width: 10%;
-    background-color: blue;
+    background-color: #dbd5c9;
 }
 
 #centro{
     width: 80%;
-    height: 95%;
+    height: 99%;
     background-color: brown;
 }
 
@@ -55,14 +57,14 @@ body{
 }
 
 #lugarDaLogo{
-    width: 50%;
+    width: 40%;
     height: 100%;
     background-color:azure; 
 }
 
 #teclado{
     display: flex;
-    width: 50%;
+    width: 60%;
     height: 100%;
     background-color:azure; 
 }
@@ -72,7 +74,7 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 60%;
+    width: 75%;
     height: 100%;
     background-color:azure; 
 }
@@ -84,5 +86,49 @@ body{
     align-items: center;
     width: 40%;
     height: 100%;
-    background-color:azure; 
+    background-color:chocolate; 
+}
+
+.btn{
+    width: 90%;
+    border-radius: 10px;
+    text-transform: uppercase;
+    cursor: pointer
+}
+
+#btnBranco{
+    background-color: #FFF;
+}
+
+#btnCorrige{
+    background-color: #e45b1d;
+}
+
+#btnConfirma{
+    background-color: #48c079;
+}
+
+#realTeclado{
+    width: 100%;
+    height: 66%; 
+}
+
+.linha{
+    display: flex;
+    justify-content: space-around;
+    width: 90%;
+    height: 22%;
+    margin: 10px;
+    background-color: cadetblue;
+}
+
+.teclaNumerica{
+    border-radius: 10px;
+    border: 1px solid black;
+    box-shadow: black;
+    width: 30%;
+    height: 100%;
+    cursor: pointer;
+    color: white;
+    background-color: rgb(34, 38, 46);
 }
