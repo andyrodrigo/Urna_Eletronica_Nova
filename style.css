@@ -82,30 +82,49 @@ body{
 #tecladoTexto{
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    justify-content: flex-end;
+    align-items: flex-start;
     width: 40%;
     height: 100%;
     background-color:chocolate; 
 }
 
 .btn{
-    width: 90%;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 15px;
+    font-weight:bold;
+    width: 78%;
     border-radius: 10px;
     text-transform: uppercase;
-    cursor: pointer
+    cursor: pointer;
+    margin-bottom: 9px;
+    border: 1px solid black;
+    box-shadow: 1px 4px 2px black;
+}
+
+.btn:active{
+    position: relative;
+    top: 3px;
+    box-shadow: none;
 }
 
 #btnBranco{
     background-color: #FFF;
+    height: 15%;
 }
 
 #btnCorrige{
     background-color: #e45b1d;
+    height: 15%;
 }
 
 #btnConfirma{
     background-color: #48c079;
+    height: 33%;
+    margin-bottom: 27%;
 }
 
 #realTeclado{
@@ -123,12 +142,20 @@ body{
 }
 
 .teclaNumerica{
+    display: flex;
+    font-size: 20px;
     border-radius: 10px;
     border: 1px solid black;
-    box-shadow: black;
+    box-shadow: 1px 4px 2px black;
     width: 30%;
     height: 100%;
     cursor: pointer;
     color: white;
     background-color: rgb(34, 38, 46);
+}
+
+.teclaNumerica:active{
+    position: relative;
+    top: 3px;
+    box-shadow: none;
 }
