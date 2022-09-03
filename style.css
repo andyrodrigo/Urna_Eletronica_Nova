@@ -1,0 +1,88 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+}
+
+#urna{
+    width: 50%;
+    height: 90%;
+    background-color: aquamarine;
+}
+
+#hardware{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    background-color:antiquewhite;  
+}
+
+.aba{
+    height: 100%;
+    width: 10%;
+    background-color: blue;
+}
+
+#centro{
+    width: 80%;
+    height: 95%;
+    background-color: brown;
+}
+
+#monitor{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50%;
+    background-color: black; 
+}
+
+#tela{
+    width: 90%;
+    height: 90%;
+    background: linear-gradient(to right, #E8E8E8, #C1C1C1); 
+}
+
+#gabinete{
+    display: flex;
+    width: 100%;
+    height: 50%;
+    background-color:azure; 
+}
+
+#lugarDaLogo{
+    width: 50%;
+    height: 100%;
+    background-color:azure; 
+}
+
+#teclado{
+    display: flex;
+    width: 50%;
+    height: 100%;
+    background-color:azure; 
+}
+
+#numerico{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    height: 100%;
+    background-color:azure; 
+}
+
+#tecladoTexto{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    height: 100%;
+    background-color:azure; 
+}
