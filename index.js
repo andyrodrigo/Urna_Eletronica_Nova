@@ -1,5 +1,7 @@
 //Variáveis-------------------------------------------
 
+let mostrador = document.getElementById("mostrador")
+
 let telaClara = document.getElementById("telaClara")
 let btn1 = document.getElementById("btn1")
 let btn2 = document.getElementById("btn2")
@@ -11,9 +13,17 @@ let btn7 = document.getElementById("btn7")
 let btn8 = document.getElementById("btn8")
 let btn9 = document.getElementById("btn9")
 let btn0 = document.getElementById("btn0")
+let btnBranco = document.getElementById("btnBranco")
+let btnCorrige = document.getElementById("btnCorrige")
+let btnConfirma = document.getElementById("btnConfirma")
 
 function teste(){
     telaClara.innerHTML = 'ok'
+}
+
+function ligar(){
+    mostrador.style.display = 'flex'
+    iniciarVotacao()
 }
 
 //Escutadores---------------------------------------------------------------------------
@@ -29,6 +39,7 @@ function escutadores(){
     btn8.addEventListener('click', teste)
     btn9.addEventListener('click', teste)
     btn0.addEventListener('click', teste)
+    btnConfirma.addEventListener('click', ligar)
 
 }
 
