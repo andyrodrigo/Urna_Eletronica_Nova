@@ -78,6 +78,21 @@ body{
     width: 70%;
 }
 
+#campoNumero{
+    display: flex;
+}
+
+#seqNumero{
+    display: flex;
+}
+
+.numero{
+    border: 1px solid black;
+    height: 20px;
+    width: 10px;
+    margin: 0 1px 0 1px;
+}
+
 #mcImagem{
     height: 100%;
     width: 30%;
