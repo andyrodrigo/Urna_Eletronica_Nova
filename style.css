@@ -5,7 +5,7 @@
 body{
     display: flex;
     justify-content: flex-start;
-    align-items: flex-start;
+    align-items: center;
     width: 100vw;
     height: 100vh;
     background-color: white;
@@ -22,13 +22,24 @@ body{
     width: 100%;
     height: 100%;
     border-radius: 15px;
-    overflow: hidden
+    overflow: hidden;
+    box-shadow: 4px 4px 1px #86827b;
+}
+
+#abaDireita{
+    justify-content: flex-end;
+}
+
+#abaEsquerda{
+    justify-content: flex-start;
 }
 
 .aba{
+    display: flex;
     height: 100%;
     width: 10%;
-    background-color: #dbd5c9;
+    background-color :#d6d0c5;
+    align-items: flex-end;
 }
 
 #centro{
@@ -39,23 +50,24 @@ body{
 
 #monitor{
     display: flex;
+    justify-content: flex-end;
     align-items: flex-end;
-    width: 98%;
-    height: 50%;
+    width: 100%;
+    height: 55%;
 }
 
 #telaEscura{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 98%;
+    width: 100%;
     height: 98%;
     background-color: black; 
 }
 
 #telaClara{
-    width: 80%;
-    height: 85%;
+    width: 87%;
+    height: 87%;
     background: linear-gradient(to right, #E8E8E8, #C1C1C1);
     font-family:Verdana, Geneva, Tahoma, sans-serif
 }
@@ -84,13 +96,42 @@ body{
 
 #seqNumero{
     display: flex;
+    align-items: center;
 }
 
 .numero{
     border: 1px solid black;
     height: 20px;
-    width: 10px;
+    width: 15px;
     margin: 0 1px 0 1px;
+}
+
+.pisca{
+    animation-name: piscando;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes piscando {
+    0%   {opacity:  1}
+    50% {opacity:  0}  
+    100% {opacity:  1}
+}
+
+.campo{
+    width: 25%;
+    display: flex;
+    align-items: center;
+}
+
+.dado{
+    display: flex;
+    align-items: center;
+}
+
+.campoDiv{
+    height: 30px;
+    display: flex;
 }
 
 #mcImagem{
@@ -102,6 +143,16 @@ body{
 .mc{
    margin-left: 3px;
    font-size: 13px;
+}
+
+#mc1{
+    height: 15%;
+}
+
+#mc2{
+    height: 15%;
+    margin-left: 85px;
+    font-size: 18px;
 }
 
 #mostraBaixo{
@@ -129,7 +180,7 @@ body{
 #gabinete{
     display: flex;
     width: 100%;
-    height: 50%;
+    height: 45%;
     background-color: #dbd5c9;
 }
 
@@ -140,34 +191,33 @@ body{
     align-items: center;
     width: 40%;
     height: 100%;
-    background-color: #dbd5c9; 
 }
 
 #teclado{
     display: flex;
     width: 60%;
     height: 100%;
-    background-color: #dbd5c9; 
 }
 
 #numerico{
+    margin-top: 25px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     width: 75%;
     height: 100%;
-    background-color: #dbd5c9; 
+   
 }
 
 #tecladoTexto{
+    margin-top: 35px;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
+    justify-content: flex-start;
     align-items: flex-start;
     width: 40%;
     height: 100%;
-    background-color: #dbd5c9; 
 }
 
 .btn{
@@ -177,7 +227,7 @@ body{
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 15px;
     font-weight:bold;
-    width: 78%;
+    width: 75%;
     border-radius: 10px;
     text-transform: uppercase;
     cursor: pointer;
@@ -210,7 +260,7 @@ body{
 
 #realTeclado{
     width: 100%;
-    height: 66%; 
+    height: 66%;
 }
 
 .linha{
@@ -228,11 +278,12 @@ body{
     border-radius: 10px;
     border: 1px solid black;
     box-shadow: 1px 4px 2px black;
-    width: 30%;
+    width: 28%;
     height: 100%;
     cursor: pointer;
     color: white;
     background-color: rgb(34, 38, 46);
+    padding: 2px 0 0 3px 
 }
 
 .teclaNumerica:active{
@@ -257,28 +308,35 @@ body{
 #ue{
     text-align: center;
     font-size: 30px;
-    margin-bottom: 15%;
+    margin-bottom: 20%;
 }
 
 #blocoImgLogo{
     width: 50%;
     height: 100%;
+    display: flex;
+    align-items: flex-end;
 }
 
 #msgLogo{
     display: flex;
     flex-direction: column;
+    justify-content: flex-end;
     font-size: 20px;
     width: 50%;
-    height: 30%;   
-}
-
-#msgLogo > p {
-    padding: 0;
-    height:1%;
+    height: 100%;  
 }
 
 #imgLogo{
     width: 90%;
     height: 90%;
+    margin-left: 5px;
+    margin-bottom: 3px;
+}
+
+.venticao{
+    width: 13%;
+    height: 3%;
+    background-color: rgb(75, 74, 74);
+    margin-bottom: 200%;
 }
