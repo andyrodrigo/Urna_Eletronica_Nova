@@ -16,6 +16,18 @@ let btn0 = document.getElementById("btn0")
 let btnBranco = document.getElementById("btnBranco")
 let btnCorrige = document.getElementById("btnCorrige")
 let btnConfirma = document.getElementById("btnConfirma")
+let numero1 = document.getElementById("numero1")
+let numero2 = document.getElementById("numero2")
+let numero3 = document.getElementById("numero3")
+let numero4 = document.getElementById("numero4")
+let numero5 = document.getElementById("numero5")
+let DF = new Array(5)
+let DE = new Array(5)
+let SE = new Array(3)
+let GO = new Array(2)
+let PR = new Array(2)
+let seq = 1;
+let processo = 1;
 
 function teste(){
     telaClara.innerHTML = 'ok'
@@ -28,18 +40,19 @@ function ligar(){
 
 //Escutadores---------------------------------------------------------------------------
 function escutadores(){
-    btn0.addEventListener('click', teste)
-    btn1.addEventListener('click', teste)
-    btn2.addEventListener('click', teste)
-    btn3.addEventListener('click', teste)
-    btn4.addEventListener('click', teste)
-    btn5.addEventListener('click', teste)
-    btn6.addEventListener('click', teste)
-    btn7.addEventListener('click', teste)
-    btn8.addEventListener('click', teste)
-    btn9.addEventListener('click', teste)
-    btn0.addEventListener('click', teste)
-    btnConfirma.addEventListener('click', ligar)
+    btn0.addEventListener('click', function(){ teclar('0') } )
+    btn1.addEventListener('click', function(){ teclar('1') })
+    btn2.addEventListener('click', function(){ teclar('2') })
+    btn3.addEventListener('click', function(){ teclar('3') })
+    btn4.addEventListener('click', function(){ teclar('4') })
+    btn5.addEventListener('click', function(){ teclar('5') })
+    btn6.addEventListener('click', function(){ teclar('6') })
+    btn7.addEventListener('click', function(){ teclar('7') })
+    btn8.addEventListener('click', function(){ teclar('8') })
+    btn9.addEventListener('click', function(){ teclar('9') })
+    btnBranco.addEventListener('click', function(){ teclar('b') })
+    btnCorrige.addEventListener('click', function(){ teclar('c') })
+    btnConfirma.addEventListener('click', function(){ teclar('con') })
 
 }
 
@@ -47,3 +60,4 @@ function escutadores(){
 
 //inicialização
 window.addEventListener("load", escutadores)
+window.addEventListener("load", ligar)
