@@ -1,8 +1,29 @@
-# Urna_Eletronica_Nova
+# Urna Eletronica Nova
 
 Design funcional da nova Urna Eletrônica 2022
+<img src="/imagens/NovaUrna.png"/>
 
-Acabei de iniciar este projeto! Construção total!
+## Deploy: ainda não tem!
 
-Basicamente terá o layout da nova urna eletrônica deste ano com alguns candidatos ficticios para o usuário votar.
+## Sobre o Projeto:
+
+> Este projeto é uma simulação da nova Urna Eletrônica Brasileira (2022).
+> Ela imita o layout original e permite que o usuário vote em  alguns candidatos ficticios e imprima o boletim de urna ao final.
+
+<hr>
+
+## Recursos:
+
+* [x] Layout da urna Nova
+* [X] Dados em tela
+* [x] Botões Funcionais
+* [x] Preenchimento Piscando a cada número
+* [ ] Reconhecimento dos candidatos e partidos pelos números
+* [ ] Imagens do candidatos
+* [ ] Armazenamento das informações
+* [ ] Sons da Urna
+* [ ] Impressão do Boletim de Urna
+* [ ] Cola dos número e Candidatos
+* [ ] Explicação sobre a Urna
+* [ ] Backend
 
