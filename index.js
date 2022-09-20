@@ -29,6 +29,10 @@ let PR = new Array(2)
 let seq = 1;
 let processo = 1;
 
+let teste1 = document.getElementById("teste1")
+let teste2 = document.getElementById("teste2")
+let teste3 = document.getElementById("teste3")
+
 function teste(){
     telaClara.innerHTML = 'ok'
 }
@@ -53,6 +57,9 @@ function escutadores(){
     btnBranco.addEventListener('click', function(){ teclar('b') })
     btnCorrige.addEventListener('click', function(){ teclar('c') })
     btnConfirma.addEventListener('click', function(){ teclar('con') })
+
+    teste1.addEventListener('click', testar)
+    teste2.addEventListener('click', testar2 )
 
 }
 

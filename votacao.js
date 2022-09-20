@@ -1,4 +1,3 @@
-
 function iniciarVotacao(){
 
     
@@ -67,7 +66,37 @@ function colocarNumero( tecla ){
 
 function confirmar(){
     if(seq > 2){
-        
+
 
     }
+}
+
+const url = "https://script.google.com/macros/s/AKfycbxzvj12wdAJiAj4osxFYcsRJlYCxtQ6EG-8tD5JB_LNTVGD73nXZV7mvEZ3k_NXOhPz/exec";
+
+function testar(){
+
+    fetch( url ).then( d => d.json() ).then(
+        d => {
+            document.getElementById( "teste3" ).textContent = d[1].candidato + d[1].voto + d[1].partido;
+            console.log( d )
+        });
+}
+
+function testar2(){
+
+    console.log("ok")
+
+    fetch(url ,{
+        method: 'POST',
+        mode: 'no-cors',
+        cache: 'no-cache',
+        //credentials: 'omit',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        redirect: 'follow',
+        //referrerPolicy: 'no-referrer',
+        body: JSON.stringify( {candidato:"bulbasaur", voto:"1"} )
+    });
+
 }
