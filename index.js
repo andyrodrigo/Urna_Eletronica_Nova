@@ -21,11 +21,22 @@ let numero2 = document.getElementById("numero2")
 let numero3 = document.getElementById("numero3")
 let numero4 = document.getElementById("numero4")
 let numero5 = document.getElementById("numero5")
+
 let DF = new Array(5)
 let DE = new Array(5)
 let SE = new Array(3)
 let GO = new Array(2)
 let PR = new Array(2)
+
+let candidatoB = '9,1,0,0,1';
+let candidatoC = '9,4,0,0,4';
+let candidatoS = '9,7,0,0,7';
+let partidoPG = '9,1,,,';
+let partidoPF = '9,4,,,';
+let partidoPA = '9,7,,,';
+
+let votados = new String(5);
+
 let seq = 1;
 let processo = 1;
 
