@@ -18,6 +18,9 @@ function teclar( tecla ){
             colocarNumero( tecla )
             break;
         case 'b':
+            if( seq == 1){
+                votarBranco()
+            }
             break;
         case 'c':
             corrigir()
@@ -34,9 +37,11 @@ function corrigir(){
     seq = 1;
     limpaTela();
     limparNumeroCandidato();
+    tecladoAberto = true;
 }
 
 function limpaTela(){
+    campoNumero.style.display =  "flex";
     numero1.innerHTML = "";
     numero2.innerHTML = "";
     numero3.innerHTML = "";
@@ -53,6 +58,8 @@ function limpaTela(){
     mc5.innerText = "";
     nomeCandidato.innerText = "";
     partidoCandidato.innerText = "";
+    nulo1.innerText = "";
+    nulo2.innerText = "";
     mostraBaixo.style.display =  "none"
 }
 
@@ -173,78 +180,66 @@ function conferir( processo ){
 function preencherDadosDaUrna(){
     mc1.innerText = "SEU VOTO PARA";
     mc3.innerText = "Número:";
-    mc4.innerText = "Nome:";
+    
     mc5.innerText = "Partido:";
 }
 
-function verificarDF(){
-    let numeroVotado = DF.toString();
-    console.log(numeroVotado);
-
-    if( numeroVotado == df1.numero ){
-        colocarDadosCandidato( df1 );
-        //console.log('bulba');
-    } else if ( numeroVotado == df2.numero ){
-        colocarDadosCandidato( df2 );
-        //console.log('char');
-    }else if ( numeroVotado == df3.numero ){
-        colocarDadosCandidato( df3 );
-        //console.log('sq');
-    }else if ( numeroVotado.charAt(0) == partido1.numero.charAt(0) && numeroVotado.charAt(2) == partido1.numero.charAt(2) ){
-        colocarDadosCandidato( partido1 );
-        //console.log('PG');
-    }else if ( numeroVotado.charAt(0) == partido2.numero.charAt(0) && numeroVotado.charAt(2) == partido2.numero.charAt(2) ){
-        colocarDadosCandidato( partido2 );
-        //console.log('PF');
-    }else if ( numeroVotado.charAt(0) == partido3.numero.charAt(0) && numeroVotado.charAt(2) == partido3.numero.charAt(2) ){
-        colocarDadosCandidato( partido3 );
-        console.log('PA');
-    }else{
-        console.log('nulo');
-    }
-}
-
-function colocarDadosCandidato( objeto ){
+function colocarDadosCandidato( objeto , completo){
+    mc3.style.display = "block";
+    mc4.style.display = "block";
+    mc5.style.display = "block";
+    nulo1.innerHTML = "";
+    nulo2.innerHTML = "";
     nomeCandidato.innerText = objeto.nome;
     partidoCandidato.innerText = objeto.partido;
-    mostraBaixo.style.display =  "block"
+    mostraBaixo.style.display =  "flex";
+    if(objeto.legenda){
+        mc4.innerText = "";
+        mostraBaixoB.style.display =  "flex";
+        if(completo){
+            nulo1.innerHTML = "Candidato Inexistente";
+            nulo2.innerHTML = "VOTO DE LEGENDA";
+        }   
+    }else{
+        mc4.innerText = "Nome:";
+        mostraBaixoB.style.display =  "none";
+    }
 }
 
-function verificarDE(){
-    let numeroVotado = DE.toString();
-    console.log(numeroVotado);
+function votarNulo() {
+    nulo1.innerHTML = nulo.nome;
+    nulo2.innerHTML = nulo.partido;
+    mc4.style.display = "none";
+    mc5.style.display = "none";
+    nomeCandidato.innerText = "";
+    partidoCandidato.innerText = "";
+    mostraBaixo.style.display =  "flex";
+    mostraBaixoB.style.display =  "none";
+}
 
-    if( numeroVotado == candidatoB ){
-        votados[seq] = "bulbasaur"
-        console.log('bulba');
-    } else if ( numeroVotado == candidatoC ){
-        votados[seq] = "charmander"
-        console.log('char');
-    }else if ( numeroVotado == candidatoS ){
-        votados[seq] = "squirtle"
-        console.log('sq');
-    }else if ( numeroVotado.charAt(0) == partidoPG.charAt(0) && numeroVotado.charAt(2) == partidoPG.charAt(2) ){
-        votados[seq] = "PG"
-        console.log('PG');
-    }else if ( numeroVotado.charAt(0) == partidoPA.charAt(0) && numeroVotado.charAt(2) == partidoPA.charAt(2) ){
-        votados[seq] = "PF"
-        console.log('PF');
-    }else if ( numeroVotado.charAt(0) == partidoPF.charAt(0) && numeroVotado.charAt(2) == partidoPF.charAt(2) ){
-        votados[seq] = "PA"
-        console.log('PA');
-    }else{
-        votados[seq] = "nulo"
-        console.log('nulo');
-    }
+function votarBranco(){
+    nulo1.innerHTML = "";
+    nulo2.innerHTML = "VOTO EM BRANCO";
+    mc4.style.display = "none";
+    mc5.style.display = "none";
+    nomeCandidato.innerText = "";
+    partidoCandidato.innerText = "";
+    mostraBaixo.style.display =  "flex";
+    mostraBaixoB.style.display =  "none";
+    tecladoAberto = false;
+    campoNumero.style.display =  "none";
+    votados[processo] = "branco";
+    seq=3;
 }
 
 function confirmar(){
     if(seq > 2){
-        console.log('votado');
+        console.log( votados );
         limpaTela();
         processo++;
         seq = 1;
         mudarProcesso();
+        tecladoAberto = true;
     }
 }
 
@@ -252,6 +247,7 @@ function mudarProcesso(){
     switch(processo){
         case 2:
             mc2.innerText = "Deputado Estadual";
+            numero5.style.display = "flex"
             break;
         case 3:
             mc2.innerText = "Senador";

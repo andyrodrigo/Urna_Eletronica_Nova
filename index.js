@@ -18,6 +18,7 @@ let btnBranco = document.getElementById("btnBranco")
 let btnCorrige = document.getElementById("btnCorrige")
 let btnConfirma = document.getElementById("btnConfirma")
 
+let campoNumero = document.getElementById("campoNumero")
 let numero1 = document.getElementById("numero1")
 let numero2 = document.getElementById("numero2")
 let numero3 = document.getElementById("numero3")
@@ -29,6 +30,9 @@ let mc2 = document.getElementById("mc2")
 let mc3 = document.getElementById("mc3")
 let mc4 = document.getElementById("mc4")
 let mc5 = document.getElementById("mc5")
+
+let nulo1 = document.getElementById("nulo1")
+let nulo2 = document.getElementById("nulo2")
 
 let tecladoAberto = true;
 

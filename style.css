@@ -158,6 +158,20 @@ body{
     font-size: 18px;
 }
 
+#nulo1{
+    display: "flex";
+    font-size: 16px;
+    padding-top: 10px;
+    width: 100%;
+}
+
+#nulo2{
+    display: "flex";
+    font-size: 30px;
+    padding-top: 10px;
+    padding-left: 35%;
+}
+
 #mostraBaixo{
     display: none;
     border-top: 2px solid black;
@@ -165,7 +179,18 @@ body{
     width: 100%;
 }
 
-#mostraBaixo > p{
+#mostraBaixoA{
+    width: 75%;;
+}
+
+#mostraBaixoB{
+    display: flex;
+    font-size: 13px;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+#mostraBaixoA > p{
     font-size: 13px;
 }
 
