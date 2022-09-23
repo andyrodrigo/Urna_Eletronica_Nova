@@ -3,6 +3,7 @@
 let mostrador = document.getElementById("mostrador")
 
 let telaClara = document.getElementById("telaClara")
+
 let btn1 = document.getElementById("btn1")
 let btn2 = document.getElementById("btn2")
 let btn3 = document.getElementById("btn3")
@@ -16,11 +17,25 @@ let btn0 = document.getElementById("btn0")
 let btnBranco = document.getElementById("btnBranco")
 let btnCorrige = document.getElementById("btnCorrige")
 let btnConfirma = document.getElementById("btnConfirma")
+
 let numero1 = document.getElementById("numero1")
 let numero2 = document.getElementById("numero2")
 let numero3 = document.getElementById("numero3")
 let numero4 = document.getElementById("numero4")
 let numero5 = document.getElementById("numero5")
+
+let mc1 = document.getElementById("mc1")
+let mc2 = document.getElementById("mc2")
+let mc3 = document.getElementById("mc3")
+let mc4 = document.getElementById("mc4")
+let mc5 = document.getElementById("mc5")
+
+let tecladoAberto = true;
+
+let nomeCandidato = document.getElementById("nomeCandidato")
+let partidoCandidato = document.getElementById("partidoCandidato")
+
+let mostraBaixo = document.getElementById("mostraBaixo")
 
 let DF = new Array(5)
 let DE = new Array(5)

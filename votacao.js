@@ -47,56 +47,68 @@ function limpaTela(){
     numero3.classList.remove("pisca")
     numero4.classList.remove("pisca")
     numero5.classList.remove("pisca")
+    mc1.innerText = "";
+    mc3.innerText = "";
+    mc4.innerText = "";
+    mc5.innerText = "";
+    nomeCandidato.innerText = "";
+    partidoCandidato.innerText = "";
+    mostraBaixo.style.display =  "none"
 }
 
 function colocarNumero( tecla ){
    // console.log(tecla)
    // console.log(seq)
-    switch(seq){
-        case 1:
-            numero1.innerHTML = tecla;
-            inserirNumeroCandidato( tecla )
-            numero1.classList.remove("pisca")
-            numero2.classList.add("pisca")
-            break;
-        case 2:
-            numero2.innerHTML = tecla;
-            inserirNumeroCandidato( tecla )
-            numero2.classList.remove("pisca")
-            numero3.classList.add("pisca");
-            conferir( processo );
-            break;
-        case 3:
-            numero3.innerHTML = tecla;
-            inserirNumeroCandidato( tecla )
-            numero3.classList.remove("pisca")
-            numero4.classList.add("pisca")
-            conferir( processo );
-            break;
-        case 4:
-            numero4.innerHTML = tecla;
-            inserirNumeroCandidato( tecla )
-            numero4.classList.remove("pisca")
-            numero5.classList.add("pisca")
-            conferir( processo );
-            break;
-        case 5:
-            numero5.innerHTML = tecla;
-            inserirNumeroCandidato( tecla )
-            numero5.classList.remove("pisca")
-            conferir( processo );
-            break;
-        default:
-            break;
-    }
-    seq++
+   if( tecladoAberto ){
+        switch(seq){
+            case 1:
+                numero1.innerHTML = tecla;
+                inserirNumeroCandidato( tecla )
+                numero1.classList.remove("pisca")
+                numero2.classList.add("pisca")
+                break;
+            case 2:
+                numero2.innerHTML = tecla;
+                inserirNumeroCandidato( tecla )
+                numero2.classList.remove("pisca")
+                numero3.classList.add("pisca");
+                conferir( processo );
+                break;
+            case 3:
+                numero3.innerHTML = tecla;
+                inserirNumeroCandidato( tecla )
+                numero3.classList.remove("pisca")
+                numero4.classList.add("pisca")
+                conferir( processo );
+                break;
+            case 4:
+                numero4.innerHTML = tecla;
+                inserirNumeroCandidato( tecla )
+                numero4.classList.remove("pisca")
+                numero5.classList.add("pisca")
+                conferir( processo );
+                break;
+            case 5:
+                numero5.innerHTML = tecla;
+                inserirNumeroCandidato( tecla )
+                numero5.classList.remove("pisca")
+                conferir( processo );
+                break;
+            default:
+                break;
+        }
+        seq++
+   }
+ 
 }
 
 function inserirNumeroCandidato( tecla ){
     let indice = seq - 1;
     switch( processo ){
         case 1:
-            DF[indice] = tecla;
+            if(seq < 5){
+                DF[indice] = tecla;
+            }
             break;
         case 2:
             DE[indice] = tecla;
@@ -118,19 +130,19 @@ function inserirNumeroCandidato( tecla ){
 function limparNumeroCandidato(){
     switch( processo ){
         case 1:
-            DF= [];
+            DF= new Array(5);
             break;
         case 2:
-            DE = [];
+            DE = new Array(5);
             break;
         case 3:
-            SE = [];
+            SE = new Array(5);
             break;
         case 4:
-            GO = [];
+            GO = new Array(5);
             break;
         case 5:
-            PR = [];
+            PR = new Array(5);
             break;
         default:
             break;
@@ -155,27 +167,47 @@ function conferir( processo ){
             verificarPR();
             break;
     }
+    preencherDadosDaUrna();
+}
+
+function preencherDadosDaUrna(){
+    mc1.innerText = "SEU VOTO PARA";
+    mc3.innerText = "Número:";
+    mc4.innerText = "Nome:";
+    mc5.innerText = "Partido:";
 }
 
 function verificarDF(){
     let numeroVotado = DF.toString();
     console.log(numeroVotado);
 
-    if( numeroVotado == candidatoB ){
-        console.log('bulba');
-    } else if ( numeroVotado == candidatoC ){
-        console.log('char');
-    }else if ( numeroVotado == candidatoS ){
-        console.log('sq');
-    }else if ( numeroVotado.charAt(0) == partidoPG.charAt(0) && numeroVotado.charAt(2) == partidoPG.charAt(2) ){
-        console.log('PG');
-    }else if ( numeroVotado.charAt(0) == partidoPA.charAt(0) && numeroVotado.charAt(2) == partidoPA.charAt(2) ){
-        console.log('PF');
-    }else if ( numeroVotado.charAt(0) == partidoPF.charAt(0) && numeroVotado.charAt(2) == partidoPF.charAt(2) ){
+    if( numeroVotado == df1.numero ){
+        colocarDadosCandidato( df1 );
+        //console.log('bulba');
+    } else if ( numeroVotado == df2.numero ){
+        colocarDadosCandidato( df2 );
+        //console.log('char');
+    }else if ( numeroVotado == df3.numero ){
+        colocarDadosCandidato( df3 );
+        //console.log('sq');
+    }else if ( numeroVotado.charAt(0) == partido1.numero.charAt(0) && numeroVotado.charAt(2) == partido1.numero.charAt(2) ){
+        colocarDadosCandidato( partido1 );
+        //console.log('PG');
+    }else if ( numeroVotado.charAt(0) == partido2.numero.charAt(0) && numeroVotado.charAt(2) == partido2.numero.charAt(2) ){
+        colocarDadosCandidato( partido2 );
+        //console.log('PF');
+    }else if ( numeroVotado.charAt(0) == partido3.numero.charAt(0) && numeroVotado.charAt(2) == partido3.numero.charAt(2) ){
+        colocarDadosCandidato( partido3 );
         console.log('PA');
     }else{
         console.log('nulo');
     }
+}
+
+function colocarDadosCandidato( objeto ){
+    nomeCandidato.innerText = objeto.nome;
+    partidoCandidato.innerText = objeto.partido;
+    mostraBaixo.style.display =  "block"
 }
 
 function verificarDE(){
@@ -212,6 +244,26 @@ function confirmar(){
         limpaTela();
         processo++;
         seq = 1;
+        mudarProcesso();
+    }
+}
+
+function mudarProcesso(){
+    switch(processo){
+        case 2:
+            mc2.innerText = "Deputado Estadual";
+            break;
+        case 3:
+            mc2.innerText = "Senador";
+            break;
+        case 4:
+            mc2.innerText = "Governador";
+            break;
+        case 5:
+            mc2.innerText = "Presidente";
+            break;
+        default:
+            break;
     }
 }
 

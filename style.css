@@ -139,7 +139,7 @@ body{
 #mcImagem{
     height: 100%;
     width: 30%;
-    background-color: aquamarine;
+    
 }
 
 .mc{
@@ -148,6 +148,7 @@ body{
 }
 
 #mc1{
+
     height: 15%;
 }
 
@@ -158,6 +159,7 @@ body{
 }
 
 #mostraBaixo{
+    display: none;
     border-top: 2px solid black;
     height: 20%;
     width: 100%;
@@ -341,4 +343,8 @@ body{
     height: 3%;
     background-color: rgb(75, 74, 74);
     margin-bottom: 200%;
+}
+
+#numero5{
+    display: none;
 }
