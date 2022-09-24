@@ -2,7 +2,7 @@ const df1 = {
     nome:"Bulbasaur",
     cargo:"Deputado Federal",
     partido:"TG - Tipo Grama",
-    numero: "0,1,0,1,",
+    numero: "0,1,0,1",
     legenda: false,
     imagem: "imagens/bulbasaur.png"
 };
@@ -11,7 +11,7 @@ const df2 = {
     nome:"Charmander",
     cargo:"Deputado Federal",
     partido:"TF - Tipo Fogo",
-    numero: "0,4,0,4,",
+    numero: "0,4,0,4",
     legenda: false,
     imagem: "imagens/charmander.png"
 };
@@ -20,7 +20,7 @@ const df3 = {
     nome:"Squirtle",
     cargo:"Deputado Federal",
     partido:"TA - Tipo Água",
-    numero: "0,7,0,7,",
+    numero: "0,7,0,7",
     legenda: false,
     imagem: "imagens/squirtle.png"
 };

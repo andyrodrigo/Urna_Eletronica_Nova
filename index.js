@@ -41,7 +41,7 @@ let partidoCandidato = document.getElementById("partidoCandidato")
 
 let mostraBaixo = document.getElementById("mostraBaixo")
 
-let DF = new Array(5)
+let DF = new Array(4)
 let DE = new Array(5)
 let SE = new Array(3)
 let GO = new Array(2)

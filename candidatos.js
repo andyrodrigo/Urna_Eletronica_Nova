@@ -91,3 +91,60 @@ function verificarDE(){
         console.log('nulo');
     }
 }
+
+function verificarSE(){
+    let numeroVotado = SE.toString();
+    console.log(numeroVotado);
+
+    if( numeroVotado == se1.numero ){
+        colocarDadosCandidato( se1 , true );
+        votados[processo] = "goku"
+        //console.log('bulba');
+    } else if ( numeroVotado == se2.numero ){
+        colocarDadosCandidato( se2, true );
+        votados[processo] = "vegeta"
+        //console.log('char');
+    }else{
+        votados[processo] = "nulo"
+        votarNulo();
+        console.log('nulo');
+    }
+}
+
+function verificarGO(){
+    let numeroVotado = GO.toString();
+    console.log(numeroVotado);
+
+    if( numeroVotado == go1.numero ){
+        colocarDadosCandidato( go1 , true );
+        votados[processo] = "bolacha"
+        //console.log('bulba');
+    } else if ( numeroVotado == go2.numero ){
+        colocarDadosCandidato( go2, true );
+        votados[processo] = "biscoito"
+        //console.log('char');
+    }else{
+        votados[processo] = "nulo"
+        votarNulo();
+        console.log('nulo');
+    }
+}
+
+function verificarPR(){
+    let numeroVotado = PR.toString();
+    console.log(numeroVotado);
+
+    if( numeroVotado == pr1.numero ){
+        colocarDadosCandidato( pr1 , true );
+        votados[processo] = "cap"
+        //console.log('bulba');
+    } else if ( numeroVotado == pr2.numero ){
+        colocarDadosCandidato( pr2, true );
+        votados[processo] = "iron"
+        //console.log('char');
+    }else{
+        votados[processo] = "nulo"
+        votarNulo();
+        console.log('nulo');
+    }
+}

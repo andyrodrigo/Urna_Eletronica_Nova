@@ -118,16 +118,25 @@ function inserirNumeroCandidato( tecla ){
             }
             break;
         case 2:
+            if(seq < 6){
+                DE[indice] = tecla;
+            }
             DE[indice] = tecla;
             break;
         case 3:
-            SE[indice] = tecla;
+            if(seq < 4){
+                SE[indice] = tecla;
+            }
             break;
         case 4:
-            GO[indice] = tecla;
+            if(seq < 3){
+                GO[indice] = tecla;
+            }
             break;
         case 5:
-            PR[indice] = tecla;
+            if(seq < 3){
+                PR[indice] = tecla;
+            }
             break;
         default:
             break;
@@ -137,19 +146,19 @@ function inserirNumeroCandidato( tecla ){
 function limparNumeroCandidato(){
     switch( processo ){
         case 1:
-            DF= new Array(5);
+            DF= new Array(4);
             break;
         case 2:
             DE = new Array(5);
             break;
         case 3:
-            SE = new Array(5);
+            SE = new Array(3);
             break;
         case 4:
-            GO = new Array(5);
+            GO = new Array(2);
             break;
         case 5:
-            PR = new Array(5);
+            PR = new Array(2);
             break;
         default:
             break;
@@ -251,9 +260,12 @@ function mudarProcesso(){
             break;
         case 3:
             mc2.innerText = "Senador";
+            numero4.style.display = "none"
+            numero5.style.display = "none"
             break;
         case 4:
             mc2.innerText = "Governador";
+            numero3.style.display = "none"
             break;
         case 5:
             mc2.innerText = "Presidente";
