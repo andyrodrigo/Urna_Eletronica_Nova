@@ -174,7 +174,9 @@ function conferir( processo ){
             verificarDE();
             break;
         case 3:
-            verificarSE();
+            if(seq > 2){
+                verificarSE();
+            }
             break;
         case 4:
             verificarGO();
@@ -242,7 +244,7 @@ function votarBranco(){
 }
 
 function confirmar(){
-    if(seq > 2){
+    if(seq > 2 ){
         console.log( votados );
         limpaTela();
         processo++;
