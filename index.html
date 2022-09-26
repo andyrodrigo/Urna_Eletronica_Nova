@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,7 +11,105 @@
     <title>Urna Eletronica</title>
 
 </head>
+
 <body>
+
+    <button id="btnCola"><strong>COLA</strong> </button>
+    <div id="cola">
+        <button id="btnFechar" > <strong>FECHAR</strong> </button>
+        <p>-------DEPUTADO FEDERAL-------</p>
+        <div class="bolCandidatos">
+            <div id="nomes">
+                <p>nome</p>
+                <br>
+                <p> Bulbasaur</p>
+                <p> Chamander</p>
+                <p> Squirtle</p>
+                <br>
+            </div>
+            <div id="numeros">
+                <p>numero</p>
+                <br>
+                <p>0101</p>
+                <p>0404</p>
+                <p>0707</p>
+                <br>
+            </div>
+        </div>
+        <p>------DEPUTADO ESTADUAL------</p>
+        <div class="bolCandidatos">
+            <div id="nomes">
+                <p>nome</p>
+                <br>
+                <p> Cachoeira</p>
+                <p> Praia</p>
+                <p> Piscina</p>
+                <br>
+            </div>
+            <div id="numeros">
+                <p>numero</p>
+                <br>
+                <p>01111</p>
+                <p>04444</p>
+                <p>07777</p>
+                <br>
+            </div>
+        </div>
+        <p>---------------SENADOR---------------</p>
+        <div class="bolCandidatos">
+            <div id="nomes">
+                <p>nome</p>
+                <br>
+                <p> Goku</p>
+                <p> Vegeta</p>
+                <br>
+            </div>
+            <div id="numeros">
+                <p>numero</p>
+                <br>
+                <p>888</p>
+                <p>666</p>
+                <br>
+            </div>
+        </div>
+        <p>------------GOVERNADOR------------</p>
+        <div class="bolCandidatos">
+            <div id="nomes">
+                <p>nome</p>
+                <br>
+                <p> Bolacha</p>
+                <p> Biscoito</p>
+                <br>
+
+            </div>
+            <div id="numeros">
+                <p>numero</p>
+                <br>
+                <p>78</p>
+                <p>87</p>
+                <br>
+            </div>
+        </div>
+        <p>-------------PRESIDENTE-------------</p>
+        <div class="bolCandidatos">
+            <div id="nomes">
+                <p>nome</p>
+                <br>
+                <p> Capitão América</p>
+                <p> Homem de Ferro</p>
+                <br>
+            </div>
+            <div id="numeros">
+                <p>numero</p>
+                <br>
+                <p>25</p>
+                <p>52</p>
+                <br>
+            </div>
+        </div>
+    </div>
+    <button id="imprimir" class="pisca">Imprimir Boletim de Urna</button>
+
     <section id="urna">
 
         <div id="hardware">
@@ -26,9 +125,11 @@
                         <div id="telaClara">
                             	<div id="mostrador">
 
+                                    <p id="mc1" class="mc"></p>
+
                                     <div id="mostraCima">
                                         <div id="mcTexto">
-                                            <p id="mc1" class="mc"></p>
+                                            
                                             <strong>
                                                 <p id="mc2" class="mc"> Deputado Federal </p>
                                             </strong>                                   
@@ -95,7 +196,7 @@
   
                                     </div>
 
-                                    <div id="mostraBaixo">
+                                    <div id="mostraBaixo" class="bordaUnica">
                                         <div id="mostraBaixoA">
                                             <p id="mb1">Aperte a tecla:</p>
                                             <p id="mb2">CONFIRMA para CONFIRMAR este voto</p>
@@ -169,6 +270,137 @@
         </div>
     </section>
 
+    <div id="boletim">
+        <br>
+        <p> <strong>JUSTIÇA ELEITORAL</strong> </p>
+        <p>Tribunal Regional Eleitoral</p>
+        <br>
+        <p>Boletim de Urna</p>
+        <br>
+        <p>===========================</p>
+        <br>
+        <p>-------DEPUTADO FEDERAL-------</p>
+        <div class="bolCandidatos">
+            <div id="nomes">
+                <p>nomes</p>
+                <br>
+                <p> Bulbasaur</p>
+                <p> Chamander</p>
+                <p> Squirtle</p>
+                <br>
+                <p> brancos</p>
+                <p> nulos</p>
+                <br>
+            </div>
+            <div id="votos">
+                <p>votos</p>
+                <br>
+                <p>000</p>
+                <p>000</p>
+                <p>000</p>
+                <br>
+                <p>000</p>
+                <p>000</p>
+                <br>
+            </div>
+        </div>
+        <p>------DEPUTADO ESTADUAL------</p>
+        <div class="bolCandidatos">
+            <div id="nomes">
+                <p>nomes</p>
+                <br>
+                <p> Cachoeira</p>
+                <p> Praia</p>
+                <p> Piscina</p>
+                <br>
+                <p> brancos</p>
+                <p> nulos</p>
+                <br>
+            </div>
+            <div id="votos">
+                <p>votos</p>
+                <br>
+                <p>000</p>
+                <p>000</p>
+                <p>000</p>
+                <br>
+                <p>000</p>
+                <p>000</p>
+                <br>
+            </div>
+        </div>
+        <p>---------------SENADOR---------------</p>
+        <div class="bolCandidatos">
+            <div id="nomes">
+                <p>nomes</p>
+                <br>
+                <p> Goku</p>
+                <p> Vegeta</p>
+                <br>
+                <p> brancos</p>
+                <p> nulos</p>
+                <br>
+            </div>
+            <div id="votos">
+                <p>votos</p>
+                <br>
+                <p>000</p>
+                <p>000</p>
+                <br>
+                <p>000</p>
+                <p>000</p>
+                <br>
+            </div>
+        </div>
+        <p>------------GOVERNADOR------------</p>
+        <div class="bolCandidatos">
+            <div id="nomes">
+                <p>nomes</p>
+                <br>
+                <p> Bolacha</p>
+                <p> Biscoito</p>
+                <br>
+                <p> brancos</p>
+                <p> nulos</p>
+                <br>
+            </div>
+            <div id="votos">
+                <p>votos</p>
+                <br>
+                <p>000</p>
+                <p>000</p>
+                <br>
+                <p>000</p>
+                <p>000</p>
+                <br>
+            </div>
+        </div>
+        <p>-------------PRESIDENTE-------------</p>
+        <div class="bolCandidatos">
+            <div id="nomes">
+                <p>nomes</p>
+                <br>
+                <p> Capitão América</p>
+                <p> Homem de Ferro</p>
+                <br>
+                <p> brancos</p>
+                <p> nulos</p>
+                <br>
+            </div>
+            <div id="votos">
+                <p>votos</p>
+                <br>
+                <p>000</p>
+                <p>000</p>
+                <br>
+                <p>000</p>
+                <p>000</p>
+                <br>
+            </div>
+        </div>
+        
+    </div>
+
     <div id="teste3"></div>
 
     <button id="teste1">
@@ -184,6 +416,16 @@
     <script src="votacao.js"></script>
     <script src="candidatos.js"></script>
 
-    
+    <footer>
+        <p> Criado por Anderson Rodrigo "Andy" </p>
+        <a class="logos" href="https://github.com/andyrodrigo">
+            <img src="imagens/github_logo.png" alt="logo do github">
+        </a>
+        <a class="logos" href="https://www.linkedin.com/in/anderson-rodrigo-gomes-ben%C3%ADcio-689190218/">
+            <img src="imagens/linkedin_logo.png" alt="logo do LinkedIn">
+        </a>
+    </footer>
+
 </body>
+
 </html>

@@ -18,6 +18,10 @@ let btnBranco = document.getElementById("btnBranco")
 let btnCorrige = document.getElementById("btnCorrige")
 let btnConfirma = document.getElementById("btnConfirma")
 
+let btnCola = document.getElementById("btnCola")
+let cola = document.getElementById("cola")
+let btnFechar = document.getElementById("btnFechar")
+
 let campoNumero = document.getElementById("campoNumero")
 let numero1 = document.getElementById("numero1")
 let numero2 = document.getElementById("numero2")
@@ -40,20 +44,21 @@ let nomeCandidato = document.getElementById("nomeCandidato")
 let partidoCandidato = document.getElementById("partidoCandidato")
 let fotoCandidato = document.getElementById("fotoCandidato")
 
+let mostraCima = document.getElementById("mostraCima")
 let mostraBaixo = document.getElementById("mostraBaixo")
+let imprimir = document.getElementById("imprimir")
+let urna = document.getElementById("urna")
+let boletim = document.getElementById("boletim")
+
+var somTecla = new Audio("sons/tecla.mp3")
+var somConfirma = new Audio("sons/confirma.mp3")
+var somFim = new Audio("sons/fim.mp3")
 
 let DF = new Array(4)
 let DE = new Array(5)
 let SE = new Array(3)
 let GO = new Array(2)
 let PR = new Array(2)
-
-let candidatoB = '9,1,0,0,1';
-let candidatoC = '9,4,0,0,4';
-let candidatoS = '9,7,0,0,7';
-let partidoPG = '9,1,,,';
-let partidoPF = '9,4,,,';
-let partidoPA = '9,7,,,';
 
 let votados = new String(5);
 
@@ -89,6 +94,11 @@ function escutadores(){
     btnCorrige.addEventListener('click', function(){ teclar('c') })
     btnConfirma.addEventListener('click', function(){ teclar('con') })
 
+    imprimir.addEventListener('click', imprimirBoletim )
+    btnCola.addEventListener('click', mostrarCola )
+    btnFechar.addEventListener('click', fechar )
+
+    //teste1.addEventListener('click', showme)
     teste1.addEventListener('click', testar)
     teste2.addEventListener('click', testar2 )
 

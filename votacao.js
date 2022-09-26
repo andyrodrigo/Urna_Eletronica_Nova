@@ -15,14 +15,17 @@ function teclar( tecla ){
         case '7':
         case '8':
         case '9':
+            somTecla.play();
             colocarNumero( tecla )
             break;
         case 'b':
             if( seq == 1){
+                somTecla.play();
                 votarBranco()
             }
             break;
         case 'c':
+            somTecla.play();
             corrigir()
             break;
         case 'con':
@@ -252,14 +255,25 @@ function votarBranco(){
 }
 
 function confirmar(){
-    if(seq > 2 ){
-        console.log( votados );
-        limpaTela();
-        processo++;
-        seq = 1;
-        mudarProcesso();
-        tecladoAberto = true;
+    if( processo != 3){
+        if(seq > 2 ){
+            aceitaConfirma()
+        }
+    }else{
+        if(seq > 3 ){
+            aceitaConfirma()
+        }
     }
+}
+
+function aceitaConfirma(){
+    somConfirma.play();
+    console.log( votados );
+    limpaTela();
+    processo++;
+    seq = 1;
+    mudarProcesso();
+    tecladoAberto = true;
 }
 
 function mudarProcesso(){
@@ -280,16 +294,56 @@ function mudarProcesso(){
         case 5:
             mc2.innerText = "Presidente";
             break;
+        case 6:
+            mostrarFim();
+            break;
         default:
             break;
     }
 }
 
 function mostrarFim(){
-    let data = Date.now;
-    mc1.innerText = data.toString();
-    mc3.innerText = "Número:";
-    mc5.innerText = "Partido:";
+    cronometro = setInterval( () => {temporizar();} , 1000 ) // ajuste a cada 1 segundo
+    mostraCima.classList.add("fim")
+    mostraCima.innerHTML = "FIM"
+    mostraBaixo.style.display = "flex";
+    mostraBaixo.classList.remove("bordaUnica")
+    mostraBaixo.classList.add("fimDeVoto")
+    mostraBaixo.innerText = "VOTOU"
+    somFim.play();
+    imprimir.style.display = "block";
+    btnCola.style.display = "none"
+    cola.style.display = "none"
+}
+
+function temporizar(){
+    let dia = new Date();
+    let diaDasemana = pegarDia( dia );
+    let data = dia.toLocaleDateString();
+    let hora = dia.toLocaleTimeString();
+    mc1.innerText = diaDasemana + " " + data.toString() + " " + hora.toString();
+}
+
+function pegarDia( dia ){
+    let n = dia.getDay()
+    switch(n){
+        case 0:
+            return "DOM";
+        case 1:
+            return "SEG";
+        case 2:
+            return "TER";
+        case 3:
+            return "QUA";;
+        case 4:
+            return "QUI";
+        case 5:
+            return "SEX";
+        case 6:
+            return "SAB";
+        default:
+            break;
+    }
 }
 
 const url = "https://script.google.com/macros/s/AKfycbxzvj12wdAJiAj4osxFYcsRJlYCxtQ6EG-8tD5JB_LNTVGD73nXZV7mvEZ3k_NXOhPz/exec";
@@ -320,4 +374,27 @@ function testar2(){
         body: JSON.stringify( {candidato:"bulbasaur", voto:"1"} )
     });
 
+}
+
+function showme(){
+    let urna = document.getElementById("urna")
+    let tam = urna.clientHeight.toString()
+    alert(tam)
+}
+
+function imprimirBoletim(){
+    imprimir.style.display = "none"
+    urna.style.display = "none"
+    boletim.style.display = "flex"
+    //alert("ok")
+}
+
+function mostrarCola(){
+    btnCola.style.display = "none"
+    cola.style.display = "flex"
+}
+
+function fechar(){
+    btnCola.style.display = "block"
+    cola.style.display = "none"
 }

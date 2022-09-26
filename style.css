@@ -4,7 +4,7 @@
 }
 body{
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
     width: 100vw;
     height: 100vh;
@@ -12,8 +12,12 @@ body{
 }
 
 #urna{
-    width: 50%;
-    height: 95%;
+   /* width: 50%;
+   height: 95%;*/
+    margin-top: 10px;
+    margin-bottom: 10px;
+    min-width: 683px;
+    min-height: 594px;
 }
 
 #hardware{
@@ -83,6 +87,14 @@ body{
     height: 80%;
     width: 100%;
     display: flex;
+    
+}
+
+.fim{
+    font-size: 130px;
+    font-family: Arial, Helvetica, sans-serif;
+    justify-content: center;
+    align-items: center;
 }
 
 #mcTexto{
@@ -174,9 +186,12 @@ body{
 
 #mostraBaixo{
     display: none;
-    border-top: 2px solid black;
     height: 20%;
     width: 100%;
+}
+
+.bordaUnica{
+    border-top: 2px solid black;
 }
 
 #mostraBaixoA{
@@ -378,4 +393,90 @@ body{
     display: none;
     width: 100%;
     height: 60%;
+}
+
+.fimDeVoto{
+    border: none;
+    color: #86827b;
+    font-size: 30px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+#imprimir{
+    display: none;
+    position:fixed;
+    padding: 10px;
+    cursor: pointer;
+    left: 30%;
+    top: 60%;
+    color: yellow;
+    background-color: red;
+}
+
+#btnCola{
+    position:fixed;
+    font-size: 20px;
+    padding: 10px 20px 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    left: 5%;
+    top: 10%;
+    color: white;
+    background-color: #28A745;
+    
+}
+
+#cola{
+    font-size: 15px;
+    display: none;
+    left: 5%;
+    top: 0%;
+    align-items: center;
+    flex-direction: column;
+    background-color:rgb(229, 232, 253);
+    position:fixed;
+}
+
+#boletim{
+    display: none;
+    flex-direction: column;
+    background-color: #DDD2C6;
+    width: 12%;
+    height: 100%;
+    font-size: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    align-items: center;
+}
+
+.bolCandidatos{
+    width: 90%;
+    display: flex;
+    justify-content:space-between;
+}
+
+footer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    color: white;
+    padding: 10px;
+}
+
+.logos > img{
+    width: 30px;
+    height: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#btnFechar{
+    padding: 10px ;
+    background-color: red;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
 }
