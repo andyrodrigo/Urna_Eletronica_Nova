@@ -373,3 +373,9 @@ body{
 #numero5{
     display: none;
 }
+
+#fotoCandidato{
+    display: none;
+    width: 100%;
+    height: 60%;
+}

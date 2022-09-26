@@ -83,7 +83,7 @@ const se1 = {
     nome:"Goku",
     cargo:"Senador",
     partido:"PPT - Partido Planeta Terra",
-    numero: "888",
+    numero: "8,8,8",
     legenda: false,
     imagem: "imagens/goku.png"
 };
@@ -92,7 +92,7 @@ const se2 = {
     nome:"Vegeta",
     cargo:"Senador",
     partido:"PPV - Partido Planeta Vegeta",
-    numero: "666",
+    numero: "6,6,6",
     legenda: false,
     imagem: "imagens/vegeta.png"
 };
@@ -101,7 +101,7 @@ const go1 = {
     nome:"Bolacha",
     cargo:"Governador",
     partido:"CO - Corretos",
-    numero: "78",
+    numero: "7,8",
     legenda: false,
     imagem: "imagens/biscoito.png"
 };
@@ -110,7 +110,7 @@ const go2 = {
     nome:"Biscoito",
     cargo:"Governador",
     partido:"UC - União Correta",
-    numero: "87",
+    numero: "8,7",
     legenda: false,
     imagem: "imagens/biscoito.png"
 };
@@ -119,7 +119,7 @@ const pr1 = {
     nome:"Capitão América",
     cargo:"Presidente",
     partido:"TC - Team Cap",
-    numero: "25",
+    numero: "2,5",
     legenda: false,
     imagem: "imagens/cap.png"
 };
@@ -128,7 +128,7 @@ const pr2 = {
     nome:"Homem de Ferro",
     cargo:"Presidente",
     partido:"TI - Team Iron",
-    numero: "52",
+    numero: "5,2",
     legenda: false,
     imagem: "imagens/iron.png"
 };

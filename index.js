@@ -38,6 +38,7 @@ let tecladoAberto = true;
 
 let nomeCandidato = document.getElementById("nomeCandidato")
 let partidoCandidato = document.getElementById("partidoCandidato")
+let fotoCandidato = document.getElementById("fotoCandidato")
 
 let mostraBaixo = document.getElementById("mostraBaixo")
 

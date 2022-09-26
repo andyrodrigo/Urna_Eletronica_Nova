@@ -41,6 +41,7 @@ function corrigir(){
 }
 
 function limpaTela(){
+    fotoCandidato.style.display = "none";
     campoNumero.style.display =  "flex";
     numero1.innerHTML = "";
     numero2.innerHTML = "";
@@ -184,6 +185,10 @@ function conferir( processo ){
         case 5:
             verificarPR();
             break;
+        case 6:
+            mostrarFim();
+
+            break;
     }
     preencherDadosDaUrna();
 }
@@ -203,8 +208,11 @@ function colocarDadosCandidato( objeto , completo){
     nulo2.innerHTML = "";
     nomeCandidato.innerText = objeto.nome;
     partidoCandidato.innerText = objeto.partido;
+    fotoCandidato.style.display = "block"
+    fotoCandidato.src = objeto.imagem;
     mostraBaixo.style.display =  "flex";
     if(objeto.legenda){
+        fotoCandidato.style.display = "none"
         mc4.innerText = "";
         mostraBaixoB.style.display =  "flex";
         if(completo){
@@ -275,6 +283,13 @@ function mudarProcesso(){
         default:
             break;
     }
+}
+
+function mostrarFim(){
+    let data = Date.now;
+    mc1.innerText = data.toString();
+    mc3.innerText = "Número:";
+    mc5.innerText = "Partido:";
 }
 
 const url = "https://script.google.com/macros/s/AKfycbxzvj12wdAJiAj4osxFYcsRJlYCxtQ6EG-8tD5JB_LNTVGD73nXZV7mvEZ3k_NXOhPz/exec";
