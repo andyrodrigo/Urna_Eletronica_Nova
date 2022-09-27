@@ -18,12 +18,12 @@ Design funcional da nova Urna Eletrônica 2022
 * [X] Dados em tela
 * [x] Botões Funcionais
 * [x] Preenchimento Piscando a cada número
-* [ ] Reconhecimento dos candidatos e partidos pelos números
-* [ ] Imagens do candidatos
-* [ ] Armazenamento das informações
-* [ ] Sons da Urna
-* [ ] Impressão do Boletim de Urna
-* [ ] Cola dos número e Candidatos
+* [X] Reconhecimento dos candidatos e partidos pelos números
+* [X] Imagens do candidatos
+* [X] Armazenamento das informações
+* [X] Sons da Urna
+* [X] Impressão do Boletim de Urna
+* [X] Cola dos número e Candidatos
 * [ ] Explicação sobre a Urna
-* [ ] Backend
+* [X] Backend
 
