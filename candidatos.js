@@ -15,7 +15,7 @@ function verificarDF(){
         votados[processo] = "squirtle"
         //console.log('sq');
     }else if ( numeroVotado.charAt(0) == partido1.numero.charAt(0) && numeroVotado.charAt(2) == partido1.numero.charAt(2) ){
-        votados[processo] = "tg"
+        votados[processo] = "bulbasaur"
         if( seq == 4 ){
             colocarDadosCandidato( partido1, true );
         }else{
@@ -23,7 +23,7 @@ function verificarDF(){
         }   
         //console.log('PG');
     }else if ( numeroVotado.charAt(0) == partido2.numero.charAt(0) && numeroVotado.charAt(2) == partido2.numero.charAt(2) ){
-        votados[processo] = "tf"
+        votados[processo] = "charmander"
         if( seq == 4 ){
             colocarDadosCandidato( partido2, true );
         }else{
@@ -31,7 +31,7 @@ function verificarDF(){
         } 
         //console.log('PF');
     }else if ( numeroVotado.charAt(0) == partido3.numero.charAt(0) && numeroVotado.charAt(2) == partido3.numero.charAt(2) ){
-        votados[processo] = "ta"
+        votados[processo] = "squirtle"
         if( seq == 4 ){
             colocarDadosCandidato( partido3, true );
         }else{
@@ -39,9 +39,9 @@ function verificarDF(){
         } 
         //console.log('PA');
     }else{
-        votados[processo] = "nulo"
+        votados[processo] = "nulo1"
         votarNulo();
-        console.log('nulo');
+        console.log('nulo1');
     }
 }
 
@@ -62,7 +62,7 @@ function verificarDE(){
         votados[processo] = "piscina"
         //console.log('sq');
     }else if ( numeroVotado.charAt(0) == partido1.numero.charAt(0) && numeroVotado.charAt(2) == partido1.numero.charAt(2) ){
-        votados[processo] = "tg"
+        votados[processo] = "cachoeira"
         if( seq == 5 ){
             colocarDadosCandidato( partido1, true );
         }else{
@@ -70,7 +70,7 @@ function verificarDE(){
         }   
         //console.log('PG');
     }else if ( numeroVotado.charAt(0) == partido2.numero.charAt(0) && numeroVotado.charAt(2) == partido2.numero.charAt(2) ){
-        votados[processo] = "tf"
+        votados[processo] = "praia"
         if( seq == 5 ){
             colocarDadosCandidato( partido2, true );
         }else{
@@ -78,7 +78,7 @@ function verificarDE(){
         } 
         //console.log('PF');
     }else if ( numeroVotado.charAt(0) == partido3.numero.charAt(0) && numeroVotado.charAt(2) == partido3.numero.charAt(2) ){
-        votados[processo] = "ta"
+        votados[processo] = "piscina"
         if( seq == 5 ){
             colocarDadosCandidato( partido3, true );
         }else{
@@ -86,9 +86,9 @@ function verificarDE(){
         } 
         //console.log('PA');
     }else{
-        votados[processo] = "nulo"
+        votados[processo] = "nulo2"
         votarNulo();
-        console.log('nulo');
+        console.log('nulo2');
     }
 }
 
@@ -105,9 +105,9 @@ function verificarSE(){
         votados[processo] = "vegeta"
         //console.log('char');
     }else{
-        votados[processo] = "nulo"
+        votados[processo] = "nulo3"
         votarNulo();
-        console.log('nulo');
+        console.log('nulo3');
     }
 }
 
@@ -124,9 +124,9 @@ function verificarGO(){
         votados[processo] = "biscoito"
         //console.log('char');
     }else{
-        votados[processo] = "nulo"
+        votados[processo] = "nulo4"
         votarNulo();
-        console.log('nulo');
+        console.log('nulo4');
     }
 }
 
@@ -143,8 +143,8 @@ function verificarPR(){
         votados[processo] = "iron"
         //console.log('char');
     }else{
-        votados[processo] = "nulo"
+        votados[processo] = "nulo5"
         votarNulo();
-        console.log('nulo');
+        console.log('nulo5');
     }
 }

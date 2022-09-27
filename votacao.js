@@ -1,7 +1,3 @@
-function iniciarVotacao(){
-
-    
-}
 
 function teclar( tecla ){
     switch(tecla){
@@ -68,8 +64,7 @@ function limpaTela(){
 }
 
 function colocarNumero( tecla ){
-   // console.log(tecla)
-   // console.log(seq)
+
    if( tecladoAberto ){
         switch(seq){
             case 1:
@@ -110,7 +105,6 @@ function colocarNumero( tecla ){
         }
         seq++
    }
- 
 }
 
 function inserirNumeroCandidato( tecla ){
@@ -199,7 +193,6 @@ function conferir( processo ){
 function preencherDadosDaUrna(){
     mc1.innerText = "SEU VOTO PARA";
     mc3.innerText = "Número:";
-    
     mc5.innerText = "Partido:";
 }
 
@@ -250,8 +243,8 @@ function votarBranco(){
     mostraBaixoB.style.display =  "none";
     tecladoAberto = false;
     campoNumero.style.display =  "none";
-    votados[processo] = "branco";
-    seq=3;
+    votados[processo] = "branco" + processo.toString();
+    seq=4;
 }
 
 function confirmar(){
@@ -303,7 +296,9 @@ function mudarProcesso(){
 }
 
 function mostrarFim(){
+    
     cronometro = setInterval( () => {temporizar();} , 1000 ) // ajuste a cada 1 segundo
+    enviar();
     mostraCima.classList.add("fim")
     mostraCima.innerHTML = "FIM"
     mostraBaixo.style.display = "flex";
@@ -346,47 +341,11 @@ function pegarDia( dia ){
     }
 }
 
-const url = "https://script.google.com/macros/s/AKfycbxzvj12wdAJiAj4osxFYcsRJlYCxtQ6EG-8tD5JB_LNTVGD73nXZV7mvEZ3k_NXOhPz/exec";
-
-function testar(){
-
-    fetch( url ).then( d => d.json() ).then(
-        d => {
-            document.getElementById( "teste3" ).textContent = d[1].candidato + d[1].voto + d[1].partido;
-            console.log( d )
-        });
-}
-
-function testar2(){
-
-    console.log("ok")
-
-    fetch(url ,{
-        method: 'POST',
-        mode: 'no-cors',
-        cache: 'no-cache',
-        //credentials: 'omit',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        redirect: 'follow',
-        //referrerPolicy: 'no-referrer',
-        body: JSON.stringify( {candidato:"bulbasaur", voto:"1"} )
-    });
-
-}
-
-function showme(){
-    let urna = document.getElementById("urna")
-    let tam = urna.clientHeight.toString()
-    alert(tam)
-}
-
 function imprimirBoletim(){
+    buscar();
     imprimir.style.display = "none"
     urna.style.display = "none"
     boletim.style.display = "flex"
-    //alert("ok")
 }
 
 function mostrarCola(){

@@ -50,6 +50,29 @@ let imprimir = document.getElementById("imprimir")
 let urna = document.getElementById("urna")
 let boletim = document.getElementById("boletim")
 
+let votosDF1 = document.getElementById("votosDF1")
+let votosDF2 = document.getElementById("votosDF2")
+let votosDF3 = document.getElementById("votosDF3")
+let votosDE1 = document.getElementById("votosDE1")
+let votosDE2 = document.getElementById("votosDE2")
+let votosDE3 = document.getElementById("votosDE3")
+let votosSE1 = document.getElementById("votosSE1")
+let votosSE2 = document.getElementById("votosSE2")
+let votosGO1 = document.getElementById("votosGO1")
+let votosGO2 = document.getElementById("votosGO2")
+let votosPR1 = document.getElementById("votosPR1")
+let votosPR2 = document.getElementById("votosPR2")
+let branco1 = document.getElementById("branco1")
+let branco2 = document.getElementById("branco2")
+let branco3 = document.getElementById("branco3")
+let branco4 = document.getElementById("branco4")
+let branco5 = document.getElementById("branco5")
+let nulos1 = document.getElementById("nulos1")
+let nulos2 = document.getElementById("nulos2")
+let nulos3 = document.getElementById("nulos3")
+let nulos4 = document.getElementById("nulos4")
+let nulos5 = document.getElementById("nulos5")
+
 var somTecla = new Audio("sons/tecla.mp3")
 var somConfirma = new Audio("sons/confirma.mp3")
 var somFim = new Audio("sons/fim.mp3")
@@ -65,17 +88,8 @@ let votados = new String(5);
 let seq = 1;
 let processo = 1;
 
-let teste1 = document.getElementById("teste1")
-let teste2 = document.getElementById("teste2")
-let teste3 = document.getElementById("teste3")
-
-function teste(){
-    telaClara.innerHTML = 'ok'
-}
-
 function ligar(){
     mostrador.style.display = 'flex'
-    iniciarVotacao()
 }
 
 //Escutadores---------------------------------------------------------------------------
@@ -97,10 +111,6 @@ function escutadores(){
     imprimir.addEventListener('click', imprimirBoletim )
     btnCola.addEventListener('click', mostrarCola )
     btnFechar.addEventListener('click', fechar )
-
-    //teste1.addEventListener('click', showme)
-    teste1.addEventListener('click', testar)
-    teste2.addEventListener('click', testar2 )
 
 }
 
